@@ -12,7 +12,11 @@
 
 .container {
   position: relative;
-  display: block;
+  display: inline-block;
+  font-size: 4rem;
+
+  width: fit-content;
+  height: fit-content;
 }
 
 .nav-button {
@@ -22,15 +26,15 @@
   position: relative;
   z-index: 2;
   transition: all 0.3s ease;
-  display: block;
+  display: inline-block;
   border: none;
   cursor: pointer;
-  padding: 1rem;
-  font-size: 4rem;
+  border: black 0.05rem solid;
 }
 
 .background {
-  background: #fc087d;
+  background: linear-gradient(135deg, #fc087d, #ff528b);
+  border: black 0.05rem solid;
   transform: skew(-20deg);
   position: absolute;
   top: 0;
