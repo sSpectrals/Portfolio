@@ -4,7 +4,7 @@ import Hero from "./hero.jsx";
 
 const App = () => {
   return (
-    <main className="max-w-7xl mx-auto">
+    <main>
       <Nav />
       <Hero />
     </main>

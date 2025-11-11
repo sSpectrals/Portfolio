@@ -1,0 +1,7 @@
+.Page {
+  border: red 5px solid;
+  margin-left: 5vw;
+  margin-top: 10vh;
+  min-height: 70vh;
+  width: 50vw;
+}

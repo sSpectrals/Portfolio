@@ -1,7 +1,8 @@
 import React from "react";
+import "./hero.css";
 
-const hero = () => {
-  return <div>hero</div>;
+const Hero = () => {
+  return <section className="Page">hero</section>;
 };
 
-export default hero;
+export default Hero;
