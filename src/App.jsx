@@ -4,8 +4,8 @@ import './nav.css'
 
 function NavBar() {
     const menuItems = [
-    { id: 1, name: 'HOME', className: 'nav-button' },
-    { id: 2, name: 'ABOUT ME', className: 'nav-button' },
+    { id: 1, name: 'ABOUT ME', className: 'nav-button' },
+    { id: 2, name: 'EXPERIENCE', className: 'nav-button' },
     { id: 3, name: 'PROJECTS', className: 'nav-button' },
     { id: 4, name: 'CONTACT', className: 'nav-button' }
   ];
