@@ -1,13 +1,12 @@
-import React from 'react'
-import './nav.css'
-
+import React from "react";
+import "./nav.css";
 
 function NavBar() {
-    const menuItems = [
-    { id: 1, name: 'ABOUT ME', className: 'nav-button' },
-    { id: 2, name: 'EXPERIENCE', className: 'nav-button' },
-    { id: 3, name: 'PROJECTS', className: 'nav-button' },
-    { id: 4, name: 'CONTACT', className: 'nav-button' }
+  const menuItems = [
+    { id: 1, name: "ABOUT ME", className: "nav-button" },
+    { id: 2, name: "EXPERIENCE", className: "nav-button" },
+    { id: 3, name: "PROJECTS", className: "nav-button" },
+    { id: 4, name: "CONTACT", className: "nav-button" },
   ];
 
   return (
