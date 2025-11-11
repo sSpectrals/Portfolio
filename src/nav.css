@@ -1,61 +1,61 @@
-body {
-    margin: 0;
-    min-height: 100vh;
-}
-
 .menu-wrapper {
-    position: absolute;
-    top: 20%;
-    right: 25%;
-    display: flex;
-    flex-direction: column;
-    gap: 8rem;
-    align-items: flex-start;
-    margin-left: 100px;
+  position: absolute;
+  top: 10%;
+  right: 15%;
+  display: flex;
+  gap: 3rem;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .container {
-    position: relative;
-    display: block;
-    width: auto;
+  position: relative;
+  display: block;
 }
 
-
 .nav-button {
-    background: grey;
-    text-align: center;
-    transform: skew(-20deg) scale(4);
-    position: relative;
-    z-index: 2;
-    transition: all 0.3s ease;
-    display: inline-block;
-    width: auto;
+  background: grey;
+  text-align: center;
+  transform: skew(-20deg);
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+  display: block;
+  border: none;
+  cursor: pointer;
+  padding: 1rem;
+  font-size: 4rem;
 }
 
 .background {
-    background: #fc087d;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    transition: all 0.2s ease;
+  background: #fc087d;
+  transform: skew(-20deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.2s ease;
 }
 
 h1 {
-    color: white;
-    margin: 0;
-    padding: 0.2rem 0.5rem;
-    white-space: nowrap;
+  color: white;
+  margin: 0;
+  padding: 0.2rem 0.5rem;
+  white-space: nowrap;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-
 .container:hover .nav-button {
-    background: black;
-    transform: skew(-25deg) scale(4.1);
+  background: black;
+  transform: skew(-25deg);
 }
 
 .container:hover .background {
-    transform: skew(-25deg) scale(4.1) translate(7%, 9%);
+  transform: skew(-25deg) translate(7%, 9%);
 }

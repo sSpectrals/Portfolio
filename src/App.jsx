@@ -1,7 +1,9 @@
 import React from 'react'
+import './nav.css'
 
-const App = () => {
-  const menuItems = [
+
+function NavBar() {
+    const menuItems = [
     { id: 1, name: 'HOME', className: 'nav-button' },
     { id: 2, name: 'ABOUT ME', className: 'nav-button' },
     { id: 3, name: 'PROJECTS', className: 'nav-button' },
@@ -18,6 +20,14 @@ const App = () => {
           <div className="background"></div>
         </div>
       ))}
+    </div>
+  );
+}
+
+const App = () => {
+  return (
+    <div>
+      <NavBar />
     </div>
   );
 };
