@@ -30,6 +30,8 @@
   border: none;
   cursor: pointer;
   border: black 0.05rem solid;
+  padding: 1rem;
+  font-size: 4rem;
 }
 
 .background {
