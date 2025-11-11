@@ -1,11 +1,25 @@
 import React from 'react'
 
 const App = () => {
-  return (
-    <main className='max-w-7xl mx-auto'>
-      <h1 className='text-2xl text-white underline'>Hello World!</h1>
-    </main>
-  )
-}
+  const menuItems = [
+    { id: 1, name: 'HOME', className: 'nav-button' },
+    { id: 2, name: 'ABOUT ME', className: 'nav-button' },
+    { id: 3, name: 'PROJECTS', className: 'nav-button' },
+    { id: 4, name: 'CONTACT', className: 'nav-button' }
+  ];
 
-export default App
+  return (
+    <div className="menu-wrapper">
+      {menuItems.map((item) => (
+        <div key={item.id} className="container">
+          <div className={item.className}>
+            <h1>{item.name}</h1>
+          </div>
+          <div className="background"></div>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default App;
