@@ -3,17 +3,17 @@ import "./nav.css";
 
 function NavBar() {
   const menuItems = [
-    { id: 1, name: "ABOUT ME", className: "nav-button" },
-    { id: 2, name: "EXPERIENCE", className: "nav-button" },
-    { id: 3, name: "PROJECTS", className: "nav-button" },
-    { id: 4, name: "CONTACT", className: "nav-button" },
+    { id: 1, name: "ABOUT ME" },
+    { id: 2, name: "EXPERIENCE" },
+    { id: 3, name: "PROJECTS" },
+    { id: 4, name: "CONTACT" },
   ];
 
   return (
     <div className="menu-wrapper">
       {menuItems.map((item) => (
         <div key={item.id} className="container">
-          <div className={item.className}>
+          <div className="nav-button">
             <h1>{item.name}</h1>
           </div>
           <div className="background"></div>
