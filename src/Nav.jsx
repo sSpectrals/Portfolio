@@ -13,9 +13,9 @@ function NavBar() {
     <div className="menu-wrapper">
       {menuItems.map((item) => (
         <div key={item.id} className="container">
-          <div className="nav-button">
+          <button className="nav-button">
             <h1>{item.name}</h1>
-          </div>
+          </button>
           <div className="background"></div>
         </div>
       ))}
