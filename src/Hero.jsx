@@ -5,8 +5,10 @@ import {
   PivotControls,
   Mask,
   useMask,
+  Stats,
 } from "@react-three/drei";
 import CanvasLoader from "./components/CanvasLoader";
+import RandomFloatingShapes from "./components/FloatingShapes";
 import { Leva, useControls } from "leva";
 
 const Frame = (props) => (
@@ -54,27 +56,18 @@ function Scene({ controls, canvasId, customStyle = {} }) {
         <directionalLight position={[10, 10, 5]} intensity={1} />
 
         {/* Circular mask - rendered first */}
-        <CircularMask />
+        {/* <CircularMask /> */}
 
         {/* Group for masked objects */}
-        <group>
-          {/* Test cubes with mask applied */}
-          <mesh position={[-1, 0, 0]}>
-            <boxGeometry args={[1, 1, 1]} />
-            <meshBasicMaterial color="yellow" {...stencil} />
-          </mesh>
+        <group></group>
 
-          <mesh position={[1, 0, 0]}>
-            <boxGeometry args={[1, 1, 1]} />
-            <meshBasicMaterial color="green" {...stencil} />
-          </mesh>
+        {/* Group for NO masked objects */}
+        <group>
+          <RandomFloatingShapes count={20} />
         </group>
 
-        {/* Reference cube WITHOUT mask - should always be visible */}
-        <mesh position={[-1, 2, 0]}>
-          <boxGeometry args={[1, 1, 1]} />
-          <meshBasicMaterial color="red" />
-        </mesh>
+        {/* FPS Stats */}
+        <Stats />
       </Suspense>
     </Canvas>
   );
@@ -101,7 +94,7 @@ const Hero = () => {
 
   return (
     <>
-      <Leva />
+      {/* <Leva /> */}
       <div className="w-full h-full">
         <section className="w-full h-full">
           <Scene controls={controls1} canvasId="hero-canvas-1" />
