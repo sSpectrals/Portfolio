@@ -6,6 +6,7 @@ import { PerspectiveCamera } from "@react-three/drei";
 function Canvas() {
   return (
     <canvas id="hero-canvas" className="w-full h-96">
+      <Suspense fallback={null}></Suspense>
       <PerspectiveCamera makeDefault position={[0, 0, 3]} />
       <City />
     </canvas>
