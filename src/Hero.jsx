@@ -6,9 +6,9 @@ import { PerspectiveCamera } from "@react-three/drei";
 import CanvasLoader from "./components/CanvasLoader";
 import { Leva, useControls } from "leva";
 
-function Scene({ controls, canvasId }) {
+function Scene({ controls, canvasId, customStyle = {} }) {
   return (
-    <Canvas id={canvasId} className="w-full h-full">
+    <Canvas id={canvasId} className="w-full h-full" style={customStyle}>
       <Suspense fallback={<CanvasLoader />}>
         <PerspectiveCamera makeDefault position={[0, 0, 5]} />
         <ambientLight intensity={0.5} />
@@ -68,9 +68,9 @@ const Hero = () => {
   return (
     <>
       <Leva />
-      <div className="flex h-full gap-4">
+      <div className="flex h-full ">
         <section
-          className="Page ml-6 mt-6 mb-6 mr-6 flex-1"
+          className="Page ml-6 mt-6 mb-6  flex-1"
           style={{
             height: "calc(100% - 3rem)",
           }}
