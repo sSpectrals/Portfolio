@@ -96,7 +96,7 @@ function Scene({
 
         {/* Group for NO masked objects */}
         <group>
-          <RandomFloatingShapes count={3} />
+          <RandomFloatingShapes count={10} />
           <Sakura position={[-0.6, 0, 2.6]} rotation={[0, 0, 0]} scale={1} />
         </group>
 
