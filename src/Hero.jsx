@@ -7,7 +7,7 @@ import CanvasLoader from "./components/CanvasLoader";
 
 function Scene() {
   return (
-    <Canvas id="hero-canvas" className="w-full h-screen">
+    <Canvas id="hero-canvas" className="w-full h-full">
       <Suspense fallback={<CanvasLoader />}>
         <PerspectiveCamera makeDefault position={[0, 0, 5]} />
         <ambientLight intensity={0.5} />
@@ -21,8 +21,11 @@ function Scene() {
 const Hero = () => {
   return (
     <section
-      className="Page w-full h-fit ml-15 mt-15 mb-15"
-      style={{ width: "100%" }}
+      className="Page ml-6 mt-6 mb-6 mr-6"
+      style={{ 
+        height: "calc(100% - 3rem)",
+        width: "calc(100% - 3rem)"
+      }}
     >
       <Scene />
     </section>
