@@ -2,6 +2,20 @@ import React, { useRef, useMemo } from "react";
 import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 
+// Shared materials (created once, reused by all shapes)
+const blackMaterial = new THREE.MeshBasicMaterial({ 
+  color: "black", 
+  transparent: true, 
+  opacity: 1 
+});
+
+const pinkWireframeMaterial = new THREE.MeshBasicMaterial({
+  color: "#fc087d",
+  wireframe: true,
+  transparent: true,
+  opacity: 0.7
+});
+
 // Random floating shapes component
 const FloatingShape = ({
   position,
@@ -59,19 +73,10 @@ const FloatingShape = ({
 
   return (
     <group ref={meshRef} scale={scale}>
-      {/* Black fill */}
-      <mesh geometry={geometry}>
-        <meshBasicMaterial color="black" transparent={true} opacity={1} />
-      </mesh>
-      {/* Pink wireframe */}
-      <mesh geometry={geometry}>
-        <meshBasicMaterial
-          color="#fc087d"
-          wireframe={true}
-          transparent={true}
-          opacity={0.7}
-        />
-      </mesh>
+      {/* Black fill - using shared material */}
+      <mesh geometry={geometry} material={blackMaterial} />
+      {/* Pink wireframe - using shared material */}
+      <mesh geometry={geometry} material={pinkWireframeMaterial} />
     </group>
   );
 };
