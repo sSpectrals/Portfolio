@@ -10,7 +10,7 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 function Model(props) {
-  const { nodes, materials } = useGLTF("public/models/scene.gltf");
+  const { nodes, materials } = useGLTF("/models/shinobu_oshino.glb");
   return (
     <group {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
@@ -169,6 +169,6 @@ function Model(props) {
   );
 }
 
-useGLTF.preload("public/models/scene.gltf");
+useGLTF.preload("/models/shinobu_oshino.glb");
 
 export default Model;
