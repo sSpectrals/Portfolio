@@ -1,34 +1,86 @@
 import React, { Suspense } from "react";
-import "./hero.css";
-import Panel from "./components/Panel.jsx";
 import { Canvas } from "@react-three/fiber";
-import { PerspectiveCamera } from "@react-three/drei";
+import {
+  PerspectiveCamera,
+  PivotControls,
+  Mask,
+  useMask,
+} from "@react-three/drei";
 import CanvasLoader from "./components/CanvasLoader";
 import { Leva, useControls } from "leva";
 
+const Frame = (props) => (
+  <mesh {...props}>
+    <ringGeometry args={[0.785, 0.85, 64]} />
+    <meshPhongMaterial color="black" />
+  </mesh>
+);
+
+const CircularMask = (props) => (
+  <group {...props}>
+    <PivotControls
+      offset={[0, 0, 1]}
+      activeAxes={[true, true, false]}
+      disableRotations
+    >
+      <Frame position={[0, 0, 1]} />
+      <Mask
+        id={1}
+        position={[0, 0, 0.95]}
+        colorWrite={false}
+        depthWrite={false}
+      >
+        <circleGeometry args={[0.8, 64]} />
+      </Mask>
+    </PivotControls>
+  </group>
+);
+
 function Scene({ controls, canvasId, customStyle = {} }) {
+  const stencil = useMask(1, false); // Second parameter: inverse mask
+
   return (
-    <Canvas id={canvasId} className="w-full h-full" style={customStyle}>
+    <Canvas
+      id={canvasId}
+      className="w-full h-full"
+      style={customStyle}
+      gl={{
+        stencil: true,
+      }}
+    >
       <Suspense fallback={<CanvasLoader />}>
         <PerspectiveCamera makeDefault position={[0, 0, 5]} />
         <ambientLight intensity={0.5} />
         <directionalLight position={[10, 10, 5]} intensity={1} />
-        <Panel
-          rotation={[
-            controls.rotationX,
-            controls.rotationY,
-            controls.rotationZ,
-          ]}
-          position={[0, -2, 0]}
-          scale={0.01}
-        />
+
+        {/* Circular mask - rendered first */}
+        <CircularMask />
+
+        {/* Group for masked objects */}
+        <group>
+          {/* Test cubes with mask applied */}
+          <mesh position={[-1, 0, 0]}>
+            <boxGeometry args={[1, 1, 1]} />
+            <meshBasicMaterial color="yellow" {...stencil} />
+          </mesh>
+
+          <mesh position={[1, 0, 0]}>
+            <boxGeometry args={[1, 1, 1]} />
+            <meshBasicMaterial color="green" {...stencil} />
+          </mesh>
+        </group>
+
+        {/* Reference cube WITHOUT mask - should always be visible */}
+        <mesh position={[-1, 2, 0]}>
+          <boxGeometry args={[1, 1, 1]} />
+          <meshBasicMaterial color="red" />
+        </mesh>
       </Suspense>
     </Canvas>
   );
 }
 
 const Hero = () => {
-  // Separate controls for each canvas
   const controls1 = useControls("Panel 1", {
     rotationX: {
       value: 2.5,
@@ -47,43 +99,12 @@ const Hero = () => {
     },
   });
 
-  const controls2 = useControls("Panel 2", {
-    rotationX: {
-      value: 0,
-      min: -10,
-      max: 10,
-    },
-    rotationY: {
-      value: 0,
-      min: -10,
-      max: 10,
-    },
-    rotationZ: {
-      value: 0,
-      min: -10,
-      max: 10,
-    },
-  });
-
   return (
     <>
       <Leva />
-      <div className="flex h-full ">
-        <section
-          className="Page ml-6 mt-6 mb-6  flex-1"
-          style={{
-            height: "calc(100% - 3rem)",
-          }}
-        >
+      <div className="w-full h-full">
+        <section className="w-full h-full">
           <Scene controls={controls1} canvasId="hero-canvas-1" />
-        </section>
-        <section
-          className="Page ml-6 mt-6 mb-6 mr-6 flex-1"
-          style={{
-            height: "calc(100% - 3rem)",
-          }}
-        >
-          <Scene controls={controls2} canvasId="hero-canvas-2" />
         </section>
       </div>
     </>

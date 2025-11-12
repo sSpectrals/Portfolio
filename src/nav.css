@@ -2,11 +2,12 @@
 
 .menu-wrapper {
   position: absolute;
-  top: 10%;
+  top: 0;
   right: 5%;
+  height: 100vh;
   display: flex;
-  gap: 3rem;
   flex-direction: column;
+  justify-content: space-evenly;
   align-items: flex-start;
 }
 
@@ -14,7 +15,6 @@
   position: relative;
   display: inline-block;
   font-size: 4rem;
-
   width: fit-content;
   height: fit-content;
 }
