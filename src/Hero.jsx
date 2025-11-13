@@ -58,6 +58,7 @@ function Scene({
       }}
     >
       <Suspense fallback={<CanvasLoader />}>
+        {/* left-right, up-down, forward-backward */}
         <PerspectiveCamera makeDefault position={[0, 0, 5]} />
 
         {/* Ambient light for general illumination */}
@@ -76,6 +77,12 @@ function Scene({
           shadow-camera-bottom={-10}
         />
 
+        {/* <gridHelper
+          args={[20, 20, 0xff0000, "black"]}
+          position={[0, -0.8, 0]}
+          rotation={[20, 45, 0]}
+        /> */}
+
         {/* Invisible shadow-only plane using ShadowMaterial */}
         <mesh
           receiveShadow
@@ -84,8 +91,8 @@ function Scene({
           renderOrder={-1} // Render behind other objects
         >
           <planeGeometry args={[10, 5]} />
-          <shadowMaterial 
-            transparent 
+          <shadowMaterial
+            transparent
             opacity={0.3}
             depthWrite={false} // Don't write to depth buffer to allow objects to render through
           />
