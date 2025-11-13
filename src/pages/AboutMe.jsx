@@ -1,4 +1,5 @@
 import React from "react";
+import "./aboutme.css";
 
 const AboutMe = ({ onGoBack }) => {
   return (
@@ -13,9 +14,11 @@ const AboutMe = ({ onGoBack }) => {
           aliquip ex ea
         </p>
       </div>
-      <button className="CloseButton" onClick={onGoBack}>
-        <h1>GO BACK</h1>
-        <div className="CloseBackground"></div>
+      <button className="Button" onClick={onGoBack}>
+        <div className="ButtonText">
+          <h1>GO BACK</h1>
+        </div>
+        <div className="BtnBackground"></div>
       </button>
     </div>
   );
