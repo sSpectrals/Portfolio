@@ -76,25 +76,22 @@ function Scene({
           shadow-camera-bottom={-10}
         />
 
-        {/* Circular mask - rendered first */}
-        {/* <CircularMask /> */}
-
-        {/* Group for masked objects */}
-        <group></group>
-
         {/* Invisible shadow-only plane using ShadowMaterial */}
-        {
-          <mesh
-            receiveShadow
-            position={[0, -0.8, 0]}
-            rotation={[-Math.PI / 2, 0, 0]}
-          >
-            <planeGeometry args={[10, 5]} />
-            <shadowMaterial transparent opacity={0.3} />
-          </mesh>
-        }
+        <mesh
+          receiveShadow
+          position={[0, -0.8, 0]}
+          rotation={[-Math.PI / 2, 0, 0]}
+          renderOrder={-1} // Render behind other objects
+        >
+          <planeGeometry args={[10, 5]} />
+          <shadowMaterial 
+            transparent 
+            opacity={0.3}
+            depthWrite={false} // Don't write to depth buffer to allow objects to render through
+          />
+        </mesh>
 
-        {/* Group for NO masked objects */}
+        {/* All objects rendered after shadow plane */}
         <group>
           <RandomFloatingShapes count={10} />
           <Sakura position={[-0.6, 0, 2.6]} rotation={[0, 0, 0]} scale={1} />
