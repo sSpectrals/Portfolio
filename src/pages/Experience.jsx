@@ -13,10 +13,10 @@ const Experience = ({ onGoBack }) => {
         </p>
       </div>
       <button className="Button" onClick={onGoBack}>
-        <div className="ButtonText">
-          <h1>GO BACK</h1>
+        <div className="BtnBackground-gray">
+          <h1 className="ButtonText">GO BACK</h1>
         </div>
-        <div className="BtnBackground"></div>
+        <div className="BtnBackground-pink"></div>
       </button>
     </div>
   );

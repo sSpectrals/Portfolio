@@ -24,22 +24,22 @@ function NavBar({ onNavigate }) {
           className="Button"
           onClick={() => handleClick(item.page)}
         >
-          <div className="ButtonText">
-            <h1>{item.name}</h1>
+          <div className="BtnBackground-gray">
+            <h1 className="ButtonText">{item.name}</h1>
           </div>
-          <div className="BtnBackground"></div>
+          <div className="BtnBackground-pink"></div>
         </button>
       ))}
     </div>
   );
 }
 
-const App = ({ onNavigate }) => {
+const Nav = ({ onNavigate }) => {
   return (
-    <div>
+    <nav>
       <NavBar onNavigate={onNavigate} />
-    </div>
+    </nav>
   );
 };
 
-export default App;
+export default Nav;

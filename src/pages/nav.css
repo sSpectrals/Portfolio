@@ -3,7 +3,7 @@
 .menu-wrapper {
   position: absolute;
   top: 0;
-  right: 5%;
+  right: 20%;
   height: 100vh;
   display: flex;
   flex-direction: column;

@@ -2,28 +2,23 @@
 
 .Button {
   position: relative;
-  display: inline-block;
-  font-size: 4rem;
-  width: fit-content;
-  height: fit-content;
+  cursor: pointer;
 }
 
-.ButtonText {
+.BtnBackground-gray {
   background: grey;
-  text-align: center;
   transform: skew(-20deg);
   position: relative;
   z-index: 2;
   transition: all 0.3s ease;
   display: inline-block;
   border: none;
-  cursor: pointer;
+
   border: black 0.05rem solid;
   padding: 1rem;
-  font-size: 4rem;
 }
 
-.BtnBackground {
+.BtnBackground-pink {
   background: linear-gradient(135deg, #fc087d, #ff528b);
   border: black 0.05rem solid;
   transform: skew(-20deg);
@@ -40,20 +35,17 @@
   color: white;
   font-family: "Nunito Sans", sans-serif;
   margin: 0;
+  font-size: 4rem;
+  text-align: center;
   padding: 0.2rem 0.5rem;
   white-space: nowrap;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.Button:hover .ButtonText {
+.Button:hover .BtnBackground-gray {
   background: black;
   transform: skew(-25deg);
 }
 
-.Button:hover .BtnBackground {
+.Button:hover .BtnBackground-pink {
   transform: skew(-25deg) translate(7%, 9%);
 }
