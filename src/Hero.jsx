@@ -112,41 +112,41 @@ function Scene({
 }
 
 const Hero = () => {
-  const rotationControl = useControls("rotation", {
-    rotationX: {
-      value: 0,
-      min: -10,
-      max: 10,
-    },
-    rotationY: {
-      value: 0,
-      min: -10,
-      max: 10,
-    },
-    rotationZ: {
-      value: 0,
-      min: -10,
-      max: 10,
-    },
-  });
+  // const rotationControl = useControls("rotation", {
+  //   rotationX: {
+  //     value: 0,
+  //     min: -10,
+  //     max: 10,
+  //   },
+  //   rotationY: {
+  //     value: 0,
+  //     min: -10,
+  //     max: 10,
+  //   },
+  //   rotationZ: {
+  //     value: 0,
+  //     min: -10,
+  //     max: 10,
+  //   },
+  // });
 
-  const positionControl = useControls("position", {
-    positionX: {
-      value: 0,
-      min: -10,
-      max: 10,
-    },
-    positionY: {
-      value: 0,
-      min: -10,
-      max: 10,
-    },
-    positionZ: {
-      value: 0,
-      min: -10,
-      max: 10,
-    },
-  });
+  // const positionControl = useControls("position", {
+  //   positionX: {
+  //     value: 0,
+  //     min: -10,
+  //     max: 10,
+  //   },
+  //   positionY: {
+  //     value: 0,
+  //     min: -10,
+  //     max: 10,
+  //   },
+  //   positionZ: {
+  //     value: 0,
+  //     min: -10,
+  //     max: 10,
+  //   },
+  // });
 
   return (
     <>
@@ -154,8 +154,8 @@ const Hero = () => {
       <div className="w-full h-full">
         <section className="w-full h-full">
           <Scene
-            rotationControl={rotationControl}
-            positionControl={positionControl}
+            // rotationControl={rotationControl}
+            // positionControl={positionControl}
             canvasId="hero-canvas-1"
           />
         </section>
