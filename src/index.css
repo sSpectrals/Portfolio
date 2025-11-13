@@ -10,10 +10,8 @@ body {
   width: 100dvw;
   height: 100dvh;
   overflow-x: hidden;
-  color: white;
   scroll-behavior: smooth;
   font-family: "Mona Sans", sans-serif;
-  /* background-image: url("../public/images/cmkosemen_screentones_001.png"); */
   background-color: white;
   background-size: cover;
   background-position: center;

@@ -34,11 +34,11 @@ const App = () => {
     };
 
     return (
-      <main className="flex flex-col lg:flex-row h-screen overflow-hidden">
-        <div className="w-screen lg:w-2/3 flex-shrink-0 h-screen">
+      <main className="relative w-screen h-screen overflow-hidden">
+        <div className="absolute inset-0 w-screen h-screen">
           <Hero />
         </div>
-        <div className="w-full lg:w-1/3 flex-shrink-0 h-full">
+        <div className="absolute top-0 right-0 w-1/2 h-full">
           {pageContent()}
         </div>
       </main>

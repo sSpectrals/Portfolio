@@ -1,10 +1,10 @@
 import React from "react";
+import "./projects.css";
 import "../button.css";
 
 const Projects = ({ onGoBack }) => {
   return (
     <div className="Panel">
-      <div className="Background"></div>
       <div className="Content">
         <h1>Projects</h1>
         <p>

@@ -36,7 +36,7 @@
   transition: all 0.2s ease;
 }
 
-h1 {
+.ButtonText {
   color: white;
   font-family: "Nunito Sans", sans-serif;
   margin: 0;

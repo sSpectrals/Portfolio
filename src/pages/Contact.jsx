@@ -1,10 +1,10 @@
 import React from "react";
+import "./contact.css";
 import "../button.css";
 
 const Contact = ({ onGoBack }) => {
   return (
     <div className="Panel">
-      <div className="Background"></div>
       <div className="Content">
         <h1>Contact</h1>
         <p>
