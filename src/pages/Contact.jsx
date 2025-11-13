@@ -1,4 +1,5 @@
 import React from "react";
+import "../button.css";
 
 const Contact = ({ onGoBack }) => {
   return (
@@ -10,9 +11,11 @@ const Contact = ({ onGoBack }) => {
           This is the Contact page. Add your contact information and form here.
         </p>
       </div>
-      <button className="CloseButton" onClick={onGoBack}>
-        <h1>GO BACK</h1>
-        <div className="CloseBackground"></div>
+      <button className="Button" onClick={onGoBack}>
+        <div className="ButtonText">
+          <h1>GO BACK</h1>
+        </div>
+        <div className="BtnBackground"></div>
       </button>
     </div>
   );

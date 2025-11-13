@@ -1,5 +1,6 @@
 import React from "react";
 import "./aboutme.css";
+import "../button.css";
 
 const AboutMe = ({ onGoBack }) => {
   return (

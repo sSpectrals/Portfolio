@@ -1,5 +1,6 @@
 import React from "react";
 import "./nav.css";
+import "../button.css";
 
 function NavBar({ onNavigate }) {
   const menuItems = [
@@ -18,15 +19,15 @@ function NavBar({ onNavigate }) {
   return (
     <div className="menu-wrapper">
       {menuItems.map((item) => (
-        <button 
-          key={item.id} 
-          className="container"
+        <button
+          key={item.id}
+          className="Button"
           onClick={() => handleClick(item.page)}
         >
-          <div className="nav-button">
+          <div className="ButtonText">
             <h1>{item.name}</h1>
           </div>
-          <div className="background"></div>
+          <div className="BtnBackground"></div>
         </button>
       ))}
     </div>
