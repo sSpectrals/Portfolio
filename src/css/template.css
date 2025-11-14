@@ -36,3 +36,16 @@
     transform: translateX(0);
   }
 }
+
+@keyframes slideOutRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.Panel.closing {
+  animation: ease-in 0.3s slideOutRight forwards;
+}

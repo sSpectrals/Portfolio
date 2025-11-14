@@ -3,9 +3,9 @@ import "../css/unused/aboutme.css";
 import "../css/button.css";
 import "../css/template.css";
 
-const AboutMe = ({ onGoBack }) => {
+const AboutMe = ({ onGoBack, isClosing }) => {
   return (
-    <div className="w-full h-screen flex flex-row Panel">
+    <div className={`w-full h-screen flex flex-row Panel ${isClosing ? 'closing' : ''}`}>
       <button
         className=" flex items-center justify-center Button"
         onClick={onGoBack}

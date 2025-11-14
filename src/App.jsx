@@ -8,26 +8,39 @@ import Contact from "./pages/Contact.jsx";
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState("home");
+  const [isClosing, setIsClosing] = useState(false);
 
   const handleNavigation = (page) => {
-    setCurrentPage(page);
+    if (currentPage !== "home" && currentPage !== page) {
+      setIsClosing(true);
+      setTimeout(() => {
+        setCurrentPage(page);
+        setIsClosing(false);
+      }, 300); // Match the animation duration
+    } else {
+      setCurrentPage(page);
+    }
   };
 
   const handleGoBack = () => {
-    setCurrentPage("home");
+    setIsClosing(true);
+    setTimeout(() => {
+      setCurrentPage("home");
+      setIsClosing(false);
+    }, 300);
   };
 
   const renderCurrentPage = () => {
     const pageContent = () => {
       switch (currentPage) {
         case "about":
-          return <AboutMe onGoBack={handleGoBack} />;
+          return <AboutMe onGoBack={handleGoBack} isClosing={isClosing} />;
         case "experience":
-          return <Experience onGoBack={handleGoBack} />;
+          return <Experience onGoBack={handleGoBack} isClosing={isClosing} />;
         case "projects":
-          return <Projects onGoBack={handleGoBack} />;
+          return <Projects onGoBack={handleGoBack} isClosing={isClosing} />;
         case "contact":
-          return <Contact onGoBack={handleGoBack} />;
+          return <Contact onGoBack={handleGoBack} isClosing={isClosing} />;
         default:
           return <Nav onNavigate={handleNavigation} />;
       }
