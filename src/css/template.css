@@ -1,6 +1,7 @@
 .Panel {
   position: absolute;
-  animation: cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.8s slideInBounce forwards;
+  /* animation: cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.8s slideInBounce forwards; */
+  animation: ease-in 0.4s slideInLeft forwards;
 }
 
 .Button:not(nav .Button) {
@@ -8,26 +9,26 @@
 }
 
 .Content {
-  /* flex: 5; */
-  background-color: #dea2ac;
-  border-width: 0px 2px 2px 2px;
+  background-color: rgb(112, 112, 112);
+  border-width: 0px 0px 0px 2px;
   border-color: black;
   border-style: solid;
 }
 
 .Title {
   position: relative;
-  color: white;
+  color: #dea2ac;
   font-family: "Nunito Sans", sans-serif;
   font-size: 5rem;
 }
 
 .TextContent {
   font: 16px Arial, sans-serif;
+  color: white;
   margin: 0 2rem 2rem 2rem;
 }
 
-@keyframes slideInBounce {
+@keyframes slideInLeft {
   0% {
     transform: translateX(100%);
   }
@@ -47,5 +48,5 @@
 }
 
 .Panel.closing {
-  animation: ease-in 0.3s slideOutRight forwards;
+  animation: ease-in 0.4s slideOutRight forwards;
 }
