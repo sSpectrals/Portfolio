@@ -31,29 +31,42 @@ const App = () => {
   };
 
   const renderCurrentPage = () => {
-    const pageContent = () => {
-      switch (currentPage) {
-        case "about":
-          return <AboutMe onGoBack={handleGoBack} isClosing={isClosing} />;
-        case "experience":
-          return <Experience onGoBack={handleGoBack} isClosing={isClosing} />;
-        case "projects":
-          return <Projects onGoBack={handleGoBack} isClosing={isClosing} />;
-        case "contact":
-          return <Contact onGoBack={handleGoBack} isClosing={isClosing} />;
-        default:
-          return <Nav onNavigate={handleNavigation} />;
-      }
-    };
-
     return (
       <main className="relative w-screen h-screen overflow-hidden">
         <div className="absolute inset-0 w-screen h-screen">
           <Hero />
         </div>
+
         <div className="absolute top-0 right-0 w-2/3 h-full">
-          {pageContent()}
+          <Nav onNavigate={handleNavigation} />
         </div>
+
+        {currentPage !== "home" && (
+          <div className="absolute top-0 right-0 w-2/3 h-full z-10">
+            {(() => {
+              switch (currentPage) {
+                case "about":
+                  return (
+                    <AboutMe onGoBack={handleGoBack} isClosing={isClosing} />
+                  );
+                case "experience":
+                  return (
+                    <Experience onGoBack={handleGoBack} isClosing={isClosing} />
+                  );
+                case "projects":
+                  return (
+                    <Projects onGoBack={handleGoBack} isClosing={isClosing} />
+                  );
+                case "contact":
+                  return (
+                    <Contact onGoBack={handleGoBack} isClosing={isClosing} />
+                  );
+                default:
+                  return null;
+              }
+            })()}
+          </div>
+        )}
       </main>
     );
   };
