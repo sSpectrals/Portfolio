@@ -1,6 +1,6 @@
 import React from "react";
-import "./experience.css";
-import "../button.css";
+import "../css/unused/experience.css";
+import "../css/button.css";
 
 const Experience = ({ onGoBack }) => {
   return (

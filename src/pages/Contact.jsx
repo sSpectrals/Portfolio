@@ -1,6 +1,6 @@
 import React from "react";
-import "./contact.css";
-import "../button.css";
+import "../css/unused/contact.css";
+import "../css/button.css";
 
 const Contact = ({ onGoBack }) => {
   return (

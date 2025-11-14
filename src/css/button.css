@@ -5,9 +5,13 @@
   cursor: pointer;
 }
 
+nav .BtnBackground-gray {
+  transform: skew(-20deg);
+}
+
 .BtnBackground-gray {
   background: grey;
-  transform: skew(-20deg);
+
   position: relative;
   z-index: 2;
   transition: all 0.3s ease;
@@ -18,10 +22,13 @@
   padding: 1rem;
 }
 
+nav .BtnBackground-pink {
+  transform: skew(-20deg);
+}
+
 .BtnBackground-pink {
   background: linear-gradient(135deg, #fc087d, #ff528b);
   border: black 0.05rem solid;
-  transform: skew(-20deg);
   position: absolute;
   top: 0;
   left: 0;
@@ -43,9 +50,16 @@
 
 .Button:hover .BtnBackground-gray {
   background: black;
-  transform: skew(-25deg);
 }
 
 .Button:hover .BtnBackground-pink {
+  transform: translate(7%, 9%);
+}
+
+nav .Button:hover .BtnBackground-gray {
+  transform: skew(-25deg);
+}
+
+nav .Button:hover .BtnBackground-pink {
   transform: skew(-25deg) translate(7%, 9%);
 }

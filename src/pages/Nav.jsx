@@ -1,6 +1,6 @@
 import React from "react";
-import "./nav.css";
-import "../button.css";
+import "../css/nav.css";
+import "../css/button.css";
 
 function NavBar({ onNavigate }) {
   const menuItems = [

@@ -1,6 +1,6 @@
 import React from "react";
-import "./projects.css";
-import "../button.css";
+import "../css/unused/projects.css";
+import "../css/button.css";
 
 const Projects = ({ onGoBack }) => {
   return (
