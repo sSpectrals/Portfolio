@@ -38,7 +38,7 @@ const App = () => {
         <div className="absolute inset-0 w-screen h-screen">
           <Hero />
         </div>
-        <div className="absolute top-0 right-0 w-1/2 h-full">
+        <div className="absolute top-0 right-0 w-2/3 h-full">
           {pageContent()}
         </div>
       </main>

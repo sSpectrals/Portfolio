@@ -1,0 +1,38 @@
+.Panel {
+  position: absolute;
+  animation: cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.8s slideInBounce forwards;
+}
+
+.Button:not(nav .Button) {
+  align-self: flex-start;
+}
+
+.Content {
+  /* flex: 5; */
+  background-color: #dea2ac;
+  border-width: 0px 2px 2px 2px;
+  border-color: black;
+  border-style: solid;
+}
+
+.Title {
+  position: relative;
+  color: white;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 5rem;
+}
+
+.TextContent {
+  font: 16px Arial, sans-serif;
+  margin: 0 2rem 2rem 2rem;
+}
+
+@keyframes slideInBounce {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
