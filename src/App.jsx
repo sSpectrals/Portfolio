@@ -5,6 +5,7 @@ import AboutMe from "./pages/AboutMe.jsx";
 import Experience from "./pages/Experience.jsx";
 import Projects from "./pages/Projects.jsx";
 import Contact from "./pages/Contact.jsx";
+import "./css/button.css";
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState("home");
@@ -66,11 +67,6 @@ const App = () => {
     }
   };
 
-  const handleGoBack = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    setCurrentPage("home");
-  };
-
   return (
     <div className="w-full">
       {/* Hero Section - Full viewport height */}
@@ -86,20 +82,58 @@ const App = () => {
       </section>
 
       <section id="about" className="w-full min-h-screen">
-        <AboutMe onGoBack={handleGoBack} />
+        <AboutMe />
       </section>
 
       <section id="experience" className="w-full min-h-screen">
-        <Experience onGoBack={handleGoBack} />
+        <Experience />
       </section>
 
       <section id="projects" className="w-full min-h-screen">
-        <Projects onGoBack={handleGoBack} />
+        <Projects />
       </section>
 
       <section id="contact" className="w-full min-h-screen">
-        <Contact onGoBack={handleGoBack} />
+        <Contact />
       </section>
+
+      {currentPage !== "home" && (
+        <div className="fixed bottom-0 w-full flex flex-row justify-evenly pb-8">
+          <button className="Button" onClick={() => handleNavigation("about")}>
+            <div className="BtnBackground-gray">
+              <h1 className="ButtonText">ABOUT ME</h1>
+            </div>
+            <div className="BtnBackground-pink"></div>
+          </button>
+          <button
+            className="Button"
+            onClick={() => handleNavigation("experience")}
+          >
+            <div className="BtnBackground-gray">
+              <h1 className="ButtonText">EXPERIENCE</h1>
+            </div>
+            <div className="BtnBackground-pink"></div>
+          </button>
+          <button
+            className="Button"
+            onClick={() => handleNavigation("projects")}
+          >
+            <div className="BtnBackground-gray">
+              <h1 className="ButtonText">PROJECTS</h1>
+            </div>
+            <div className="BtnBackground-pink"></div>
+          </button>
+          <button
+            className="Button"
+            onClick={() => handleNavigation("contact")}
+          >
+            <div className="BtnBackground-gray">
+              <h1 className="ButtonText">CONTACT</h1>
+            </div>
+            <div className="BtnBackground-pink"></div>
+          </button>
+        </div>
+      )}
     </div>
   );
 };

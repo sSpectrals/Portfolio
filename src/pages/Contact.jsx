@@ -30,60 +30,6 @@ const Contact = () => {
           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
         </div>
       </div>
-      <div className="flex flex-row justify-evenly pb-8">
-        <button
-          className="Button"
-          onClick={() =>
-            document
-              .getElementById("home")
-              ?.scrollIntoView({ behavior: "smooth" })
-          }
-        >
-          <div className="BtnBackground-gray">
-            <h1 className="ButtonText">HOME</h1>
-          </div>
-          <div className="BtnBackground-pink"></div>
-        </button>
-        <button
-          className="Button"
-          onClick={() =>
-            document
-              .getElementById("about")
-              ?.scrollIntoView({ behavior: "smooth" })
-          }
-        >
-          <div className="BtnBackground-gray">
-            <h1 className="ButtonText">ABOUT ME</h1>
-          </div>
-          <div className="BtnBackground-pink"></div>
-        </button>
-        <button
-          className="Button"
-          onClick={() =>
-            document
-              .getElementById("experience")
-              ?.scrollIntoView({ behavior: "smooth" })
-          }
-        >
-          <div className="BtnBackground-gray">
-            <h1 className="ButtonText">EXPERIENCE</h1>
-          </div>
-          <div className="BtnBackground-pink"></div>
-        </button>
-        <button
-          className="Button"
-          onClick={() =>
-            document
-              .getElementById("projects")
-              ?.scrollIntoView({ behavior: "smooth" })
-          }
-        >
-          <div className="BtnBackground-gray">
-            <h1 className="ButtonText">PROJECTS</h1>
-          </div>
-          <div className="BtnBackground-pink"></div>
-        </button>
-      </div>
     </div>
   );
 };
