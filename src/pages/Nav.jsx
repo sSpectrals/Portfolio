@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/nav.css";
+// import "../css/nav.css";
 import "../css/button.css";
 
 function NavBar({ onNavigate }) {
@@ -17,7 +17,7 @@ function NavBar({ onNavigate }) {
   };
 
   return (
-    <div className="menu-wrapper">
+    <div className="absolute top-0 right-1/5 h-screen flex flex-col justify-evenly items-start">
       {menuItems.map((item) => (
         <button
           key={item.id}

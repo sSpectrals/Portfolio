@@ -1,52 +1,10 @@
-.Panel {
-  position: absolute;
-  /* animation: cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.8s slideInBounce forwards; */
-  animation: ease-in 0.4s slideInLeft forwards;
-}
-
-.Button:not(nav .Button) {
-  align-self: flex-start;
-}
-
-.Content {
-  background-color: rgb(112, 112, 112);
-  border-width: 0px 0px 0px 2px;
-  border-color: black;
-  border-style: solid;
-}
-
 .Title {
-  position: relative;
-  color: #dea2ac;
+  color: #000000;
   font-family: "Nunito Sans", sans-serif;
   font-size: 5rem;
 }
 
 .TextContent {
   font: 16px Arial, sans-serif;
-  color: white;
-  margin: 0 2rem 2rem 2rem;
-}
-
-@keyframes slideInLeft {
-  0% {
-    transform: translateX(100%);
-  }
-
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideOutRight {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
-
-.Panel.closing {
-  animation: ease-in 0.4s slideOutRight forwards;
+  color: rgb(0, 0, 0);
 }
