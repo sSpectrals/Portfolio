@@ -46,6 +46,16 @@ export default {
           800: "#0c515a",
           900: "#06292d",
         },
+        pastel: {
+          blue: "#aec6cf",
+          pink: "#f8cecc",
+          green: "#b2d8b2",
+          yellow: "#f5f5dc",
+          purple: "#dda0dd",
+          orange: "#f4c2a1",
+          red: "#ffb3ba",
+          DEFAULT: "#aec6cf",
+        },
       },
       backgroundImage: {
         terminal: "url('/assets/terminal.png')",

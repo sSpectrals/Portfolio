@@ -30,9 +30,9 @@ const FloatingShape = ({
 
   // Define viewport boundaries based on camera position and field of view
   const bounds = {
-    x: { min: -8, max: 8 },
-    y: { min: -4.5, max: 4.5 },
-    z: { min: -2, max: 8 },
+    x: { min: -2, max: 2 },
+    y: { min: -1, max: 2 },
+    z: { min: -2, max: 2 },
   };
 
   useFrame((state) => {
@@ -70,15 +70,15 @@ const FloatingShape = ({
       case "box":
         return new THREE.BoxGeometry(1, 1, 1);
       case "sphere":
-        return new THREE.SphereGeometry(0.5, 16, 16);
+        return new THREE.SphereGeometry(0.5, 4, 4);
       case "octahedron":
-        return new THREE.OctahedronGeometry(0.6);
+        return new THREE.OctahedronGeometry(0.3);
       case "tetrahedron":
-        return new THREE.TetrahedronGeometry(0.7);
+        return new THREE.TetrahedronGeometry(0.4);
       case "icosahedron":
-        return new THREE.IcosahedronGeometry(0.6);
+        return new THREE.IcosahedronGeometry(0.3);
       case "dodecahedron":
-        return new THREE.DodecahedronGeometry(0.6);
+        return new THREE.DodecahedronGeometry(0.3);
       case "torus":
         return new THREE.TorusGeometry(0.5, 0.2, 8, 16);
       case "cone":
