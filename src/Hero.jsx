@@ -11,6 +11,7 @@ import CanvasLoader from "./components/CanvasLoader";
 import RandomFloatingShapes from "./components/FloatingShapes";
 import Sakura from "./components/LowPolySakura";
 import { Leva, useControls } from "leva";
+import { useMediaQuery } from "react-responsive";
 
 const Frame = (props) => (
   <mesh {...props}>
@@ -46,6 +47,7 @@ function Scene({
   customStyle = {},
 }) {
   const stencil = useMask(1, false); // Second parameter: inverse mask
+  const isPc = useMediaQuery({ minWidth: 768 });
 
   return (
     <Canvas
@@ -100,7 +102,7 @@ function Scene({
 
         {/* All objects rendered after shadow plane */}
         <group>
-          <RandomFloatingShapes count={10} />
+          {isPc && <RandomFloatingShapes count={10} />}
           <Sakura position={[-0.6, 0, 2.6]} rotation={[0, 0, 0]} scale={1} />
         </group>
 
