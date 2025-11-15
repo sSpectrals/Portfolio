@@ -79,7 +79,10 @@ const Hero = (rotationControl, positionControl) => {
       <Leva />
       <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
         <h1 className="z-10 text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-left absolute top-1/3 left-4 sm:left-8 md:left-16 lg:left-[10rem] -translate-y-1/2 leading-none">
-          <span className="inline-block min-h-[1.2em] z-10">
+          <span
+            className="inline-block min-h-[1.2em] z-10"
+            style={{ WebkitTextStroke: "1px white" }}
+          >
             {text}
             <span className="animate-pulse ml-1">|</span>
           </span>

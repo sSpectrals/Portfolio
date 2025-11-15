@@ -1,6 +1,6 @@
 import React from "react";
 
-const AboutMe = ({ onGoBack }) => {
+const AboutMe = () => {
   return (
     <div className="w-full min-h-screen bg-pastel-blue flex flex-col">
       <div className="flex-1 flex flex-col Content">
