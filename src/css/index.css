@@ -1,40 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap");
-@import "tailwindcss";
 
-:root {
-  --gradient: radial-gradient(circle, #e5e5e5 0%, #fff 100%);
-}
-
-html,
-body {
-  width: 100dvw;
-  height: 100dvh;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-  font-family: "Mona Sans", sans-serif;
-  background-color: white;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  -webkit-user-select: none; /* Safari */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Standard syntax */
-}
-
-section {
-  width: 100dvw;
-}
-
-@theme {
-  --font-sans: "Mona Sans", sans-serif;
-  --color-white-50: #d9ecff;
-  --color-black-50: #1c1c21;
-  --color-black-100: #0e0e10;
-  --color-black-200: #282732;
-  --color-blue-50: #839cb5;
-  --color-blue-100: #2d2d38;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer utilities {
   .flex-center {
