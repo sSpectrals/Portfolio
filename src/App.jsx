@@ -1,9 +1,11 @@
 import NavBar from "./sections/Navbar.jsx";
+import Hero from "./sections/Hero_2.jsx";
 
 const App = () => {
   return (
-    <main className="max-w-7xl mx-auto">
+    <main className=" mx-auto">
       <NavBar />
+      <Hero />
     </main>
 
     // <div className="w-full">

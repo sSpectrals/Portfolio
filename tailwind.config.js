@@ -23,7 +23,7 @@ export default {
           500: "#62646C",
         },
         pink: {
-          DEFAULT: "#ec4899",
+          50: "#fedbff",
           100: "#fbdaeb",
           200: "#f7b6d6",
           300: "#f491c2",
@@ -33,6 +33,7 @@ export default {
           700: "#8e2b5c",
           800: "#5e1d3d",
           900: "#2f0e1f",
+          DEFAULT: "#ec4899",
         },
         teal: {
           100: "#d2f5f9",

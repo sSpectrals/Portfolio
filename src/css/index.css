@@ -9,13 +9,17 @@
 }
 
 body {
-  background: #010103;
+  /* background: #fedbff; */
   font-family: "General Sans", sans-serif;
 }
 
 @layer utilities {
   .c-space {
     @apply sm:px-10 px-5;
+  }
+
+  .animate-pulse {
+    animation-duration: 1.2s; /* Change to your desired duration, e.g., 0.5s for faster, 2s for slower */
   }
 
   .head-text {
@@ -39,7 +43,7 @@ body {
   }
 
   .text-gray_gradient {
-    @apply bg-gradient-to-r from-[#BEC1CF] from-60% via-[#D5D8EA] via-60% to-[#D5D8EA] to-100% bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-[#BEC1CF] from-10% via-[#D5D8EA] via-90% to-[#D5D8EA] to-100% bg-clip-text text-transparent;
   }
 
   /* button component */
