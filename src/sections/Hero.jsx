@@ -5,8 +5,9 @@ import { Leva, useControls } from "leva";
 import Sakura from "../components/LowPolySakura";
 import CanvasLoader from "../components/CanvasLoader";
 import RandomFloatingShapes from "../components/FloatingShapes";
+import { useMediaQuery } from "react-responsive";
 
-const Hero = (rotationControl, positionControl) => {
+const Hero = () => {
   // const rotationControl = useControls("rotation", {
   //   rotationX: {
   //     value: 0,
@@ -46,6 +47,7 @@ const Hero = (rotationControl, positionControl) => {
   const [text, setText] = useState("");
   const [wordIndex, setWordIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
+  const isMobile = useMediaQuery({ maxWidth: 768 });
 
   useEffect(() => {
     const words = ["WORK", "RELAX", "REPEAT"];
@@ -96,7 +98,10 @@ const Hero = (rotationControl, positionControl) => {
           <Canvas shadows className="w-full h-full">
             <Suspense fallback={<CanvasLoader />}>
               {/* Camera */}
-              <PerspectiveCamera makeDefault position={[0, 0, 3]} />
+              <PerspectiveCamera
+                makeDefault
+                position={isMobile ? [0, 0, 2] : [0, 0, 3]}
+              />
               {/* Ambient light for general illumination */}
               <ambientLight intensity={2} />
 
@@ -116,13 +121,13 @@ const Hero = (rotationControl, positionControl) => {
 
               {/* <gridHelper
                 args={[20, 20, 0xff0000, "black"]}
-                position={[0, -0.8, 0]}
+                position={[0, -1, 0]}
               /> */}
 
               {/* Invisible shadow-only plane using ShadowMaterial */}
               <mesh
                 receiveShadow
-                position={[0, -0.8, 0]}
+                position={isMobile ? [0, -0.6, 0] : [0, -0.8, 0]}
                 rotation={[-Math.PI / 2, 0, 0]}
                 renderOrder={-1} // Render behind other objects
               >
@@ -130,9 +135,9 @@ const Hero = (rotationControl, positionControl) => {
                 <shadowMaterial transparent opacity={0.3} depthWrite={false} />
               </mesh>
 
-              <group>
-                <RandomFloatingShapes count={10} />
-                <Sakura position={[1, 0, 0]} />
+              <group position={isMobile ? [0.2, -0.2, 0] : [1, 0, 0]}>
+                <Sakura scale={isMobile ? 0.5 : 1} />
+                <RandomFloatingShapes count={isMobile ? 5 : 10} />
               </group>
 
               <Stats />
