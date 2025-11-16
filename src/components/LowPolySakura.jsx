@@ -9,11 +9,11 @@ Title: Low-poly Sakura Tree
 
 import { useGLTF } from "@react-three/drei";
 
-function Sakura() {
+function Sakura(props) {
   const { nodes, materials } = useGLTF("models/low-poly-sakura.glb");
 
   return (
-    <group dispose={null}>
+    <group {...props} dispose={null}>
       <mesh
         castShadow
         receiveShadow
