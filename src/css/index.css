@@ -11,6 +11,8 @@
 body {
   /* background: #fedbff; */
   font-family: "General Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @layer utilities {
