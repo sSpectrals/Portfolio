@@ -89,7 +89,10 @@ const Hero = () => {
             <span className="animate-pulse ml-1">|</span>
           </span>
         </h1>
-        <p className="z-10 hero_tag text-gray_gradient text-left absolute lg:top-[40%] md:top-[37.5%] top-[35%] left-4 sm:left-8 md:left-16 lg:left-[20rem]">
+        <p
+          style={{ WebkitTextStroke: "1px grey" }}
+          className="z-10 hero_tag text-gray_gradient text-left absolute lg:top-[40%] md:top-[37.5%] top-[35%] left-4 sm:left-8 md:left-16 lg:left-[20rem]"
+        >
           WELCOME
         </p>
 

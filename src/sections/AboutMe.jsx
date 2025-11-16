@@ -1,34 +1,49 @@
 import React from "react";
-
+// text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-left absolute top-1/3 left-4 sm:left-8 md:left-16 lg:left-[10rem] -translate-y-1/2 leading-none
 const AboutMe = () => {
   return (
-    <div className="w-full min-h-screen bg-pastel-blue flex flex-col rounded-t-[10px]">
-      <div className="flex-1 flex flex-col Content">
-        <h1 className="text-center Title">ABOUT ME</h1>
-        <div className=" TextContent w-1/2 mx-auto">
-          Losem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea Losem ipsum dolor sit amet, consectetur adipiscing elit.
-          Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-          enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-          ut aliquip ex ea Losem ipsum dolor sit amet, consectetur adipiscing
-          elit. Sed do eiusmod tempor incididunt ut labore et dolore magna
-          aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-          laboris nisi ut aliquip ex ea Losem ipsum dolor sit amet, consectetur
-          adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut aliquip ex ea Losem ipsum dolor sit amet,
-          consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-          exercitation ullamco laboris nisi ut aliquip ex ea Losem ipsum dolor
-          sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        </div>
+    <section className="c-space bg-pastel-blue grid grid-cols-2 grid-rows-4 py-20 h-[200vh]">
+      {/* Row 1, Col 1 */}
+      <div className="text-center flex items-center justify-center min-h-[20vh] text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black col-start-1 row-start-1">
+        Hi, I'm Edgar Mamikonian
       </div>
-    </div>
+      {/* Row 1, Col 2 */}
+      <div className=" text-center flex items-center justify-center col-start-2 row-start-1">
+        x
+      </div>
+      {/* Row 2, Col 1 */}
+      <div className=" text-center flex items-center justify-center col-start-1 row-start-2">
+        x
+      </div>
+      {/* Row 2, Col 2 */}
+      <div className=" w-full h-full text-center text-[clamp(2rem,2vw,6rem)] flex items-center justify-center col-start-2 row-start-2">
+        I am a computer science & engineering student with a passion for solving
+        problems.
+      </div>
+      {/* Row 3, Col 1 */}
+      <div className="w-full h-full text-center text-[clamp(2rem,2vw,6rem)] flex items-center justify-center col-start-1 row-start-3">
+        Currently, I'm expanding my skills in robotics & mathematics while
+        applying everything in code.
+      </div>
+      {/* Row 3, Col 2 */}
+      <div className=" text-center flex items-center justify-center col-start-2 row-start-3"></div>
+      {/* Row 4, Col 1 */}
+      <div className=" text-center flex items-center justify-center col-start-1 row-start-4">
+        x
+      </div>
+      {/* Row 4, Col 2 */}
+      <div className=" w-full h-full text-center text-[clamp(2rem,2vw,6rem)] flex items-center justify-center col-start-2 row-start-4">
+        I'm always looking for new challenges and opportunities to grow as an
+        engineer.
+      </div>
+    </section>
   );
 };
 
 export default AboutMe;
+
+// Text
+// <h1 className="grid-headtext">Hello! I'm Edgar Mamikonian</h1>
+// <p className="grid-subtext">
+
+// </p>
