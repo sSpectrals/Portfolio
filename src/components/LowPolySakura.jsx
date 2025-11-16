@@ -13,7 +13,7 @@ import { useFrame } from "@react-three/fiber";
 import { useGLTF } from "@react-three/drei";
 
 function Sakura({ rotationSpeed = 0.4, ...props }) {
-  const { nodes, materials } = useGLTF("/models/low-poly-sakura.glb");
+  const { nodes, materials } = useGLTF("models/low-poly-sakura.glb");
 
   return (
     <group {...props} dispose={null}>
@@ -27,6 +27,6 @@ function Sakura({ rotationSpeed = 0.4, ...props }) {
   );
 }
 
-useGLTF.preload("/models/low-poly-sakura.glb");
+useGLTF.preload("models/low-poly-sakura.glb");
 
 export default Sakura;
