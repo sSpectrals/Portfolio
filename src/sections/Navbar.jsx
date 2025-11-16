@@ -27,7 +27,7 @@ function NavBar() {
             href="/"
             className="text-black font-bold text-xl hover:text-pink-400 transition-colors"
           >
-            Edgar
+            Edgar Mamikonian
           </a>
 
           <button
