@@ -5,7 +5,17 @@ const NavItems = () => (
   <ul className="nav-ul">
     {navLinks.map((item) => (
       <li key={item.id} className="nav-li">
-        <a href={item.href} className="nav-li_a" onClick={() => {}}>
+        <a
+          href={item.href}
+          className="nav-li_a"
+          onClick={e => {
+            e.preventDefault();
+            const el = document.querySelector(item.href);
+            if (el) {
+              el.scrollIntoView({ behavior: 'smooth' });
+            }
+          }}
+        >
           {item.name}
         </a>
       </li>

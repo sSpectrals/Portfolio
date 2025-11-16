@@ -2,7 +2,10 @@ import React from "react";
 // text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-left absolute top-1/3 left-4 sm:left-8 md:left-16 lg:left-[10rem] -translate-y-1/2 leading-none
 const AboutMe = () => {
   return (
-    <section className="c-space bg-pastel-blue grid grid-cols-2 grid-rows-4 py-20 h-[200vh]">
+    <section
+      id="about"
+      className="c-space bg-pastel-blue grid grid-cols-2 grid-rows-4 h-[200vh]"
+    >
       {/* Row 1, Col 1 */}
       <div className="text-center flex items-center justify-center min-h-[20vh] text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black col-start-1 row-start-1">
         Hi, I'm Edgar Mamikonian
