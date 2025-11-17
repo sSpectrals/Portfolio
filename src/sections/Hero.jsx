@@ -47,7 +47,6 @@ const Hero = () => {
   const [text, setText] = useState("");
   const [wordIndex, setWordIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const isMobile = useMediaQuery({ maxWidth: 768 });
 
   useEffect(() => {
     const words = ["WORK", "RELAX", "REPEAT"];
@@ -77,78 +76,23 @@ const Hero = () => {
   }, [text, isDeleting, wordIndex]);
 
   return (
-    <section id="home" className="bg-pink-50 min-h-screen w-full flex flex-col relative">
-      <Leva />
-      <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
-        <h1 className="z-10 text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-left absolute top-1/3 left-4 sm:left-8 md:left-16 lg:left-[10rem] -translate-y-1/2 leading-none">
-          <span
-            className="inline-block min-h-[1.2em] z-10"
-            style={{ WebkitTextStroke: "1px white" }}
-          >
-            {text}
-            <span className="animate-pulse ml-1">|</span>
-          </span>
-        </h1>
-        <p
-          style={{ WebkitTextStroke: "1px grey" }}
-          className="z-10 hero_tag text-gray_gradient text-left absolute lg:top-[40%] md:top-[37.5%] top-[35%] left-4 sm:left-8 md:left-16 lg:left-[20rem]"
+    <div className="w-full mx-auto flex flex-col  c-space gap-3">
+      <h1 className="z-10 text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-left absolute top-1/3 left-4 sm:left-8 md:left-16 lg:left-[10rem] -translate-y-1/2 leading-none">
+        <span
+          className="inline-block min-h-[1.2em] z-10"
+          style={{ WebkitTextStroke: "1px white" }}
         >
-          WELCOME
-        </p>
-
-        <div className="w-full h-full absolute inset-0 z-0">
-          {/* 3D content */}
-          <Canvas shadows className="w-full h-full">
-            <Suspense fallback={<CanvasLoader />}>
-              {/* Camera */}
-              <PerspectiveCamera
-                makeDefault
-                position={isMobile ? [0, 0, 2] : [0, 0, 3]}
-              />
-              {/* Ambient light for general illumination */}
-              <ambientLight intensity={2} />
-
-              {/* Directional light with helper */}
-              <directionalLight
-                position={[12, 10, 10]}
-                intensity={3}
-                color="blue"
-                castShadow
-                shadow-mapSize={[4096, 4096]}
-                shadow-camera-far={50}
-                shadow-camera-left={-10}
-                shadow-camera-right={10}
-                shadow-camera-top={10}
-                shadow-camera-bottom={-10}
-              />
-
-              {/* <gridHelper
-                args={[20, 20, 0xff0000, "black"]}
-                position={[0, -1, 0]}
-              /> */}
-
-              {/* Invisible shadow-only plane using ShadowMaterial */}
-              <mesh
-                receiveShadow
-                position={isMobile ? [0, -0.6, 0] : [0, -0.8, 0]}
-                rotation={[-Math.PI / 2, 0, 0]}
-                renderOrder={-1} // Render behind other objects
-              >
-                <planeGeometry args={[10, 10]} />
-                <shadowMaterial transparent opacity={0.3} depthWrite={false} />
-              </mesh>
-
-              <group position={isMobile ? [0.2, -0.2, 0] : [1, 0, 0]}>
-                <Sakura scale={isMobile ? 0.5 : 1} />
-                <RandomFloatingShapes count={isMobile ? 5 : 10} />
-              </group>
-
-              <Stats />
-            </Suspense>
-          </Canvas>
-        </div>
-      </div>
-    </section>
+          {text}
+          <span className="animate-pulse ml-1">|</span>
+        </span>
+      </h1>
+      <p
+        style={{ WebkitTextStroke: "1px grey" }}
+        className="z-10 hero_tag text-gray_gradient text-left absolute lg:top-[40%] md:top-[37.5%] top-[35%] left-4 sm:left-8 md:left-16 lg:left-[20rem]"
+      >
+        WELCOME
+      </p>
+    </div>
   );
 };
 
