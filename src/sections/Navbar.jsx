@@ -4,21 +4,21 @@ import { navLinks } from "../constants/index.js";
 const NavItems = () => (
   <ul className="nav-ul">
     {navLinks.map((item) => (
-      <li key={item.id} className="nav-li">
-        <a
-          href={item.href}
-          className="nav-li_a"
-          onClick={e => {
-            e.preventDefault();
-            const el = document.querySelector(item.href);
-            if (el) {
-              el.scrollIntoView({ behavior: 'smooth' });
-            }
-          }}
-        >
+      <button
+        key={item.id}
+        className="nav-li"
+        onClick={(e) => {
+          e.preventDefault();
+          const el = document.querySelector(item.href);
+          if (el) {
+            el.scrollIntoView({ behavior: "smooth" });
+          }
+        }}
+      >
+        <a href={item.href} className="nav-li_a">
           {item.name}
         </a>
-      </li>
+      </button>
     ))}
   </ul>
 );
