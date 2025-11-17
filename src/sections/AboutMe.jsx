@@ -2,7 +2,10 @@ import React from "react";
 // text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-left absolute top-1/3 left-4 sm:left-8 md:left-16 lg:left-[10rem] -translate-y-1/2 leading-none
 const AboutMe = () => {
   return (
-    <section id="about" className="bg-pastel-blue px-3 sm:px-10">
+    <section
+      id="about"
+      className="bg-pastel-blue px-3 sm:px-10 overflow-x-hidden "
+    >
       <div className="italic text-center flex items-center justify-center mx-auto text-6xl min-h-[100vh]">
         "Woo, I'm about to make a name for myself here" <br /> - Deadpool &
         Wolferine (2024)
