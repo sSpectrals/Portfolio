@@ -25,13 +25,7 @@ const AboutMe = () => {
           solving problems.
         </div>
         {/* Row 2, Col 2: Image */}
-        <div className="col-start-2 row-start-2 flex items-center justify-center">
-          <img
-            className="w-32 h-32 sm:w-52 sm:h-52 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-80 xl:h-80 2xl:w-96 2xl:h-96 rounded-full"
-            src={"assets/incognito.svg"}
-            alt="me"
-          />
-        </div>
+        <div className="col-start-2 row-start-2 flex items-center justify-center"></div>
         {/* Row 3, Col 1: Text */}
         <div className="  col-start-1 row-start-3 flex items-center justify-center text-xl sm:text-3xl md:text-4xl lg:text-5xl italic text-center">
           Currently, I'm expanding my skills in robotics & mathematics while
@@ -40,13 +34,7 @@ const AboutMe = () => {
         {/* Row 3, Col 2 */}
         <div className="rotate-12 min-h-[20vh] text-center flex items-center justify-center col-start-2 row-start-3"></div>
         {/* Row 4, Col 1 */}
-        <div className=" min-h-[20vh] text-center flex items-center justify-center col-start-1 row-start-4">
-          <img
-            className="w-32 h-32 sm:w-52 sm:h-52 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-80 xl:h-80 2xl:w-96 2xl:h-96 "
-            src={"assets/robot.svg"}
-            alt="robot"
-          />
-        </div>
+        <div className=" min-h-[20vh] text-center flex items-center justify-center col-start-1 row-start-4"></div>
         {/* Row 4, Col 2 */}
         <div className="italic min-h-[20vh] text-center text-1xl sm:text-3xl md:text-4xl lg:text-5xl flex items-center justify-center col-start-2 row-start-4">
           I'm always looking for new challenges and opportunities to develop my
@@ -60,8 +48,24 @@ const AboutMe = () => {
 
 export default AboutMe;
 
-// Text
-// <h1 className="grid-headtext">Hello! I'm Edgar Mamikonian</h1>
-// <p className="grid-subtext">
+// <img
+//   className="w-32 h-32 sm:w-52 sm:h-52 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-80 xl:h-80 2xl:w-96 2xl:h-96 rounded-full"
+//   src={"assets/incognito.svg"}
+//   alt="me"
+// />;
 
-// </p>
+// TEXT
+
+// "Woo, I'm about to make a name for myself here" <br /> - Deadpool &
+// Wolferine (2024)
+//             Hi, I'm Edgar Mamikonian
+
+//                       I am a computer science & engineering student with a passion for
+//   solving problems.
+
+//             Currently, I'm expanding my skills in robotics & mathematics while
+//   applying everything in code.
+
+//             I'm always looking for new challenges and opportunities to develop my
+//   skillset. Want to get in touch? Find my contact information in the
+//   Contact section!
